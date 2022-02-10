@@ -1,16 +1,26 @@
 <script>
-	let firstname = 'sojeong';
-	let lastname = 'park';
-	let color = 'blue'
+	import Header from './components/Header.svelte';
+	import Tabs from './shared/Tabs.svelte';
 
-	$: name = firstname + ' ' + lastname
+	//tabs
+    let items = ['Dashboard','Opportunities'];
+    let activeItem ='Dashboard';
+	
+	const tabSwitch = (e) =>{
+         activeItem = e.detail
+		 console.log(activeItem)
+     }
 
 </script>
 
+<Header />
 <main>
-	<h1 style= "color: {color}">Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<button on:click={()=>color ='purple'}>CLick</button>
+	<Tabs items={items} activeItem={activeItem} on:tabchange={tabSwitch} />
+	{#if activeItem === 'Dashboard'}
+	<p>top opps</p>
+	{:else if activeItem === 'Opportunities'}
+	<p>List of opps</p>
+	{/if}
 </main>
 
 <style>
