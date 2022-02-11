@@ -1,11 +1,9 @@
-<script>
-
+ <!-- <script>
+   console.log(opp,"opp")
+ 
 </script>
 
-<div>
-<p>hi oppdetail</p>
-</div>
 
-<style>
-
-</style>
+<p>detail</p>
+ -->
+   
