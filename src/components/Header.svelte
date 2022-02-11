@@ -2,7 +2,7 @@
 
 </script>
 <header>
-    <h1>Svelte Mini App</h1>
+    <h1>Svelte Opportunities</h1>
 </header>
 
 <style>
