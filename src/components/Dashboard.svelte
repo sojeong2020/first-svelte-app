@@ -3,14 +3,20 @@
 
     export let opps;
     console.log(opps,"opps")
+    let slicedOpps= opps.slice(0,3)
+    console.log(slicedOpps,"slicedOpps")
+
 
 </script>
 
-<p>dashboard</p>
+<h2>Popular Opportunities</h2>
+<div>
+   
+</div>
 
 
 <div class="dashboard-list">
-    {#each opps as opp }
+    {#each slicedOpps as opp }
     <Link to="detail/{opp.id}">
     <li>{opp.name}</li>
     </Link>
